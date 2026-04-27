@@ -1,0 +1,129 @@
+@import "colors.css";
+
+body, html, h1, h2, h3, h4, h5, h6, p, blockquote, pre {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Goldman", sans-serif;
+    font-style: normal;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background: var(--background);
+    position: relative;
+}
+@keyframes wave {
+    from {
+        transform: scale(1)
+    }
+    to {
+        transform: scale(1.1)
+    }
+}
+
+.first-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    header {
+        width: 90%;
+
+        h1 {
+            text-align: center;
+            margin-top: .6rem;
+            font-size: 6rem;
+            color: var(--text-color);
+        }
+    }
+    .cite {
+        width: 80%;
+        text-align: center;
+
+        p {
+            font-size: 2rem;
+            color: var(--blue-acent);
+        }
+        p:nth-child(2) {
+            margin-top: 6rem;
+            font-size: 4.35rem;
+            color: var(--blue-acent);
+            opacity: 1;
+        }
+    }
+
+    .block {
+        width: 80%;
+        margin-top: 2rem;
+        height: 200px;
+        border: 5px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        h1 {
+            padding-inline: 2rem;
+            font-size: 3rem;
+        }
+    }
+    .block:not(:first-child) {
+        margin-top: 6rem
+    }
+    .block-1 {
+        animation: wave .4s ease-in-out;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+    }
+    .block-2 {
+        animation: wave .6s ease-in-out;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+    }
+    .block-3 {
+        animation: wave .8s ease-in-out;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+    }
+
+    .about-us {
+
+        margin-top: auto;
+        margin-bottom: 3rem;
+
+        .social-links {
+            margin-bottom: 4rem;
+            text-align: center;
+            font-size: 2rem;
+
+            .tg-vk {
+                margin-top: 1.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+
+        a {
+            font-size: 4rem;
+            color: var(--pink-acent);
+            text-decoration: none;
+
+            svg {
+                transform: translateY(10px);
+                scale: 1.4;
+            }
+        }
+    }
+
+
+
+}

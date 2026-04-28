@@ -204,6 +204,17 @@ header {
     }
 
 }
+
+.moscow-gif, .beijing-gif {
+    top: 1rem;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    width: 90%;
+    opacity: .9;
+}
+.beijing-gif {
+    opacity: .8;
+}
 .text-block {
     margin-top: 5rem;
     margin-right: 1rem;

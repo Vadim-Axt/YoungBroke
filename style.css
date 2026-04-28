@@ -161,7 +161,7 @@ header {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                gap: 1rem;
+                gap: 4rem;
             }
         }
 
@@ -211,6 +211,13 @@ header {
     .main-title {
         font-size: 2.5rem;
         margin-right: 1rem;
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
     }
     .main-text {
         margin-top: 1rem;
@@ -293,15 +300,67 @@ header {
                 width: 25%;
                 height: 4rem;
                 background: var(--background);
+                color: black;
+                z-index: 50;
+
+                svg {
+                    transform: scale(3.1) translateX(-.2rem);
+                    display: inline-block;
+                }
             }
         }
     }
 
 }
 
+.second-block {
+    &.active {
+        display: none;
+    }
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-bottom: 4rem;
+    margin-top: 10rem;
+    .main-title {
+        margin-left: 3rem;
+        font-size: 3rem;
+    }
+    .author, .date {
+        display: block;
+        margin-top: 1rem;
+        text-align: start;
+        margin-left: 3rem;
+        margin-right: 1rem;
+        font-size: 2rem;
+    }
 
+}
 
-
+.third-block {
+    &.active {
+        display: none;
+    }
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-bottom: 4rem;
+    margin-top: 10rem;
+    .main-title {
+        margin-left: 3rem;
+        font-size: 3rem;
+    }
+    .author, .date {
+        display: block;
+        margin-top: 1rem;
+        text-align: start;
+        margin-left: 3rem;
+        margin-right: 1rem;
+        font-size: 2rem;
+    }
+}
 
 
 

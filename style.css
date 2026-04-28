@@ -22,7 +22,7 @@ body {
         transform: scale(1)
     }
     to {
-        transform: scale(1.1)
+        transform: scale(1.05)
     }
 }
 
@@ -39,8 +39,8 @@ header {
         transform: rotate(180deg) scale(1.2);
         display: block;
         position: absolute;
-        top: 1.5rem;
-        left: 5rem;
+        top: 1.9rem;
+        left: 1rem;
         width: 8rem;
         border: 3px solid black;
         transition: .1s;
@@ -63,7 +63,7 @@ header {
 }
 
 .first-page {
-
+    z-index: 20;
     position: absolute;
     top: 0;
     left: 0;
@@ -72,7 +72,6 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: start;
-        display: none;
     .cite {
         width: 80%;
         margin-top: 7rem;
@@ -95,7 +94,8 @@ header {
     }
 
     .block {
-        width: 80%;
+        width: 90%;
+
         margin-top: 2rem;
         height: 200px;
         border: 5px solid black;
@@ -112,6 +112,15 @@ header {
     }
     .block:not(:first-child) {
         margin-top: 6rem
+    }
+    .block-1.active {
+        display: none;
+    }
+    .block-2.active {
+        display: none;
+    }
+    .block-3.active {
+        display: none;
     }
     .block-1 {
         animation: wave .4s ease-in-out;
@@ -133,6 +142,10 @@ header {
 
         margin-top: auto;
         margin-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
         &.active {
             display: none;
@@ -156,6 +169,7 @@ header {
             font-size: 4rem;
             color: var(--pink-acent);
             text-decoration: none;
+            display: inline-block;
 
             svg {
                 transform: translateY(10px);
@@ -167,19 +181,23 @@ header {
 }
 
 .first-block {
+    &.active {
+        display: none;
+    }
+    z-index: 10;
     position: absolute;
     top: 0;
     left: 0;
     padding-bottom: 4rem;
-
+    margin-top: 10rem;
     .main-title {
-        margin-top: 10rem;
         margin-left: 3rem;
         font-size: 3rem;
     }
     .author, .date {
         display: block;
         margin-top: 1rem;
+        text-align: start;
         margin-left: 3rem;
         margin-right: 1rem;
         font-size: 2rem;
@@ -187,8 +205,9 @@ header {
 
 }
 .text-block {
-    margin-top: 3rem;
+    margin-top: 5rem;
     margin-right: 1rem;
+
     .main-title {
         font-size: 2.5rem;
         margin-right: 1rem;
@@ -198,9 +217,6 @@ header {
         margin-left: 3rem;
         font-size: 2rem;
         margin-right: 1rem;
-    }
-    .main-text:first-of-type {
-        margin-top: 2rem;
     }
     .footnote {
         margin-top: 2rem;
@@ -232,9 +248,10 @@ header {
     justify-content: center;
     margin-left: 3rem;
     margin-top: 3rem;
-    margin-right: 1rem;
+    margin-right: 2rem;
     text-align: center;
     background: black;
+    padding: 2px;
 
 
     .headers {
@@ -247,9 +264,10 @@ header {
 
         .table-col-title {
             font-size: 1.9rem;
+            margin-bottom: 2px;
             width: 25%;
             font-weight: 500;
-            height: 4rem;
+            height: 6rem;
             background: var(--background);
         }
     }

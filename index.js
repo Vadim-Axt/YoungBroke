@@ -8,16 +8,21 @@ const backBtn = document.getElementById("back-btn")
 const title = document.getElementById("yab")
 const aboutUs = document.getElementById("about-us")
 const cite = document.getElementById("cite")
+const firstBlock = document.getElementById("first-block")
 
-
-
-block1.addEventListener("click", (event) => {
-    active()
-})
 function active() {
+    firstBlock.classList.toggle("active")
+    block1.classList.toggle("active")
+    block2.classList.toggle("active")
+    block3.classList.toggle("active")
     backBtn.classList.toggle("active");
     title.classList.toggle("active");
     aboutUs.classList.toggle("active");
     cite.classList.toggle("active");
 }
-active();
+
+block1.addEventListener("click", (event) => {
+    active()
+})
+backBtn.addEventListener("click", () => active())
+
